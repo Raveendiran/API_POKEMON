@@ -145,7 +145,7 @@ class DjangoSession(models.Model):
 
 
 class EggGroups(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField()
     identifier = models.CharField(max_length=79)
 
     class Meta:
@@ -154,7 +154,7 @@ class EggGroups(models.Model):
 
 
 class Items(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField()
     identifier = models.CharField(max_length=79)
     category_id = models.IntegerField()
     cost = models.IntegerField()
@@ -167,7 +167,7 @@ class Items(models.Model):
 
 
 class Locations(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField()
     region_id = models.IntegerField(blank=True, null=True)
     identifier = models.CharField(max_length=79)
 
@@ -177,7 +177,7 @@ class Locations(models.Model):
 
 
 class Moves(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField()
     identifier = models.CharField(max_length=79)
     generation_id = models.IntegerField()
     type_id = models.IntegerField()
@@ -199,7 +199,7 @@ class Moves(models.Model):
 
 
 class Pokemon(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField()
     identifier = models.CharField(max_length=79)
     species_id = models.IntegerField(blank=True, null=True)
     height = models.IntegerField()
@@ -223,7 +223,7 @@ class PokemonEggGroups(models.Model):
 
 
 class PokemonFormGenerations(models.Model):
-    pokemon_form_id = models.IntegerField(primary_key=True)
+    pokemon_form_id = models.IntegerField()
     generation_id = models.IntegerField()
     game_index = models.IntegerField()
 
@@ -265,7 +265,7 @@ class Products(models.Model):
 
 
 class Stats(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField()
     damage_class_id = models.IntegerField(blank=True, null=True)
     identifier = models.CharField()
     is_battle_only = models.SmallIntegerField()
@@ -277,7 +277,7 @@ class Stats(models.Model):
 
 
 class Types(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.IntegerField()
     identifier = models.CharField(max_length=79)
     generation_id = models.IntegerField()
     damage_class_id = models.IntegerField(blank=True, null=True)
@@ -289,7 +289,7 @@ class Types(models.Model):
 
 class Users(models.Model):
     nom = models.CharField(max_length=255, blank=True, null=True)
-    prenom = models.CharField(max_length=255, blank=True, null=True)
+    prénom = models.CharField(max_length=255, blank=True, null=True)
     mail = models.CharField(max_length=255, blank=True, null=True)
     password = models.CharField(max_length=255, blank=True, null=True)
     pokemon_id = models.SmallIntegerField(blank=True, null=True)
