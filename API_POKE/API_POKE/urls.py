@@ -21,7 +21,7 @@ from django.urls import path, re_path
 
 
 urlpatterns = [
-    path(r'POKEMON_V1/', include('POKEMON_V1.urls')),
+    path(r'', include('POKEMON_V1.urls')),
     path(r'admin/', admin.site.urls),
 ]
 
